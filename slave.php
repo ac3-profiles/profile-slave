@@ -49,8 +49,8 @@
  
 	header('content-type: text/plain');
 
-	if($_SERVER['REMOTE_ADDR'] != "37.187.112.26" || $_SERVER['REMOTE_ADDR'] != "198.100.147.96"){
-		die("You are not allowed to view this page!");
+	if($_SERVER['REMOTE_ADDR'] != "37.187.112.26" && $_SERVER['REMOTE_ADDR'] != "198.100.147.96"){
+		die($_SERVER['REMOTE_ADDR'] . " - You are not allowed to view this page!");
 	}
 	
 	if(!isset($_GET['mode']) || empty($_GET['mode'])){
@@ -61,8 +61,7 @@
 		
 	//Are you here?!
 	if(strtoupper($mode) == strtoupper("hello")){
-		echo("hi_-_");
-		echo(hash_file('md5', __FILE__));
+		echo("hi_-_" . hash_file('md5', __FILE__));
 		return;
 	}
 	
