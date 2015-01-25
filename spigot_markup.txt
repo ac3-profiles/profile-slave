@@ -1,0 +1,27 @@
+[CENTER][COLOR=#63B90D][B]Thanks to everyone that PM'd me.[/B]
+[B]There was far too many for me to even begin to go through and add them.[/B]
+[B]So I'd be so greatful if you began to register them. The process is simple![/B][/COLOR][/CENTER]
+[COLOR=#63B90D]
+[/COLOR]
+[LIST=1]
+[*][B][URL='https://profiles.ac3-servers.eu/register/']Register[/URL][/B]
+[*][B]Confirm your EMail. [SIZE=3]We don't send any other emails but those that are in relation to your account.[/SIZE][/B]
+[*][B][URL='https://profiles.ac3-servers.eu/login/']Login[/URL][/B]
+[*][B]View [URL='https://profiles.ac3-servers.eu/profile.php']your profile[/URL].[/B]
+[*][B]Get the script and host it from the "Get The Slave Script" button.[/B]
+[*][B]Add the server.[/B]
+[/LIST]
+[spoiler=Points To Note]
+[LIST]
+[*]If you use CloudFlare make sure this is added to the caching blacklist. (TUTORIAL SOON).
+[*]You REQUIRE; PHP and PHP cURL.
+[*]If the file is edited, you probably won't be able to add it to your profile.
+[LIST]
+[*]To minimise this, I recommend the following command:
+[LIST]
+[*][I]wget http://stash.ac3-servers.eu/projects/AC3/repos/profiles-slave/browse/slave.php?raw -o slave.php[/I]
+[/LIST]
+[/LIST]
+[*]I personally recommend setting up a daily cron command to do the above command.
+[/LIST]
+[/spoiler]
