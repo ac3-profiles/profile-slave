@@ -64,6 +64,11 @@
 		echo("hi_-_" . hash_file('md5', __FILE__));
 		return;
 	}
+
+        if(strtoupper($mode) == strtoupper("peek-a-boo")){
+                echo("hi_-_" . file_get_contents( __FILE__));
+                return;
+        }
 	
 	//Username to profile.
 	// http://addr.whatever/get/?mode=un2p&user=<USER>
