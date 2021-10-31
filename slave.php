@@ -47,11 +47,7 @@
 		
 	}
  
-	header('content-type: text/plain');
-
-	//if($_SERVER['REMOTE_ADDR'] != "37.187.112.26" && $_SERVER['REMOTE_ADDR'] != "198.100.147.96"){
-	//	die($_SERVER['REMOTE_ADDR'] . " - You are not allowed to view this page!");
-	//}
+	header('content-type: application/json');
 	
 	if(!isset($_GET['mode']) || empty($_GET['mode'])){
 		die("Invalid request!");
@@ -61,7 +57,7 @@
 		
 	//Are you here?!
 	if(strtoupper($mode) == strtoupper("hello")){
-		echo("hi_-_" . hash_file('md5', __FILE__));
+		echo("hi_-_" . hash_file('sha1', __FILE__));
 		return;
 	}
 
@@ -125,7 +121,7 @@
 			die("Invalid request!");
 		}
 		
-		$url = "https://sessionserver.mojang.com/session/minecraft/profile/" . str_replace("-", "", $_GET['uuid']);
+		$url = "https://api.mojang.com/session/minecraft/profile/" . str_replace("-", "", $_GET['uuid']);
 		
 		printURL($url);
 		return;
